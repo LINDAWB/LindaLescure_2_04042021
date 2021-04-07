@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* Début format Web */
+/* Début format Desktop */
 
 body {
   font-family: "Raleway", Times New Roman, Times, serif;
@@ -9,7 +9,7 @@ body {
 
 /* Début conteneur  de la <div id="grill"> représentant le body à diviser en blocs */
 #divDuBody {
-  height: 100vh;
+  /*height: 100vh;*/
   display: grid;
   grid-template-columns: 4fr 2fr;
   grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
@@ -22,11 +22,11 @@ body {
 }
 
 div.container {
-  border: solid black; /*aide visuelle*/
+  border: solid red; /*aide visuelle*/
 }
 /* Fin conteneur <div id="grill"> représentant le body */
 
-/* Bloc Header  format Web */
+/* Bloc Header - format Desktop */
 header {
   grid-area: header;
   display: grid;
@@ -70,9 +70,9 @@ header nav:hover {
   color: #0065fc;
   border-top: solid #0065fc;
 }
-/* Fin du bloc Header  format Web */
+/* Fin du bloc Header - format Desktop */
 
-/* Bloc Main (zone Recherche)  format Web */
+/* Bloc Main (zone Recherche) - format Desktop */
 main {
   grid-area: main;
   display: grid;
@@ -84,14 +84,14 @@ main {
     "résultat";
 }
 
-/* 1ère section (Introduction Recherche)  format Web */
+/* 1ère section (Introduction Recherche) - format Desktop */
 /* masquage titre h1 format mobile */
 #h1Mobile {
   display: none;
 }
-/* Fin de 1ère section (Introduction Recherche)  format Web */
+/* Fin de 1ère section (Introduction Recherche)  - format Desktop */
 
-/* 2ème section (Barre de recherche)  format Web  */
+/* 2ème section (Barre de recherche) - format Desktop */
 form {
   display: grid;
   grid-template-columns: 40px 250px 100px 40px;
@@ -128,22 +128,21 @@ input {
 #buttonMobile {
   display: none;
 }
-/* Fin 2ème section (Barre de recherche)  format Web */
+/* Fin 2ème section (Barre de recherche) - format Desktop */
 
-/* Début 3ème section (Filtres)  format Web */
+/* Début 3ème section (Filtres) - format Desktop */
 /* Fin 3ème section (Filtres)  format Web */
 section#filtres {
   background-color: greenyellow;
   height: 50px;
 }
+/* Fin du bloc Main (zone Recherche) - format Desktop */
 
-/* Fin du bloc Main (zone Recherche)  format Web */
+/* Bloc 3 : Propositions d'hébergements - format Desktop */
 
-/* Bloc 3 : Propositions d'hébergements */
-
-/* Gros sous-bloc 3.1 (Section) : Hébergements */
+/* Sous-bloc 3.1 (Section) : Hébergements - format Desktop */
 section#hébergementsMarseille {
-  background-color: yellow;
+  background-color: #f2f2f2;
   grid-area: hébergementsMarseille;
   display: grid;
   grid-template-rows: 1fr 7fr 1fr;
@@ -151,28 +150,61 @@ section#hébergementsMarseille {
     "h2 "
     "div"
     "p "; */
+  border-radius: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 div#blocCardsHm {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 2;
-  grid-template-areas:
-    "article article article"
-    "article article article";
-  background-color: maroon;
+  /*grid-template-areas:
+  "a a a"
+  "a a a"*/
+  /*"article article article"
+    "article article article";*/
+  /*background-color: maroon; */
   grid-gap: 44px;
-  text-align: center; /*  aide visuelle */
+  /* text-align: center;  aide visuelle */
 }
 
 article.cardHm {
-  background-color: yellowgreen; /* aide visuelle */
+  border: solid #fff 3px;
+  border-radius: 20px;
   display: grid;
   grid-template-rows: 2fr 1fr;
 }
-/* Fin du gros sous-bloc 3.1(Section) : Hébergements */
 
-/* Petit sous-bloc 3.2 (Aside) : Les plus populaires */
+div.photoHm {
+  border-radius: 20px 20px 0 0;
+}
+
+div.comHm {
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+article:hover {
+  /* aussi valable pour les articles de l'aside */
+  box-shadow: 0 0 20px gray;
+}
+
+#blocCardsHm a {
+  text-decoration: none;
+  color: black;
+}
+
+p span {
+  /* valable pour les p span de l'aside et de la section activités aussi */
+  font-weight: bold;
+}
+/* Fin du sous-bloc 3.1 (Section) : Hébergements - format Desktop */
+
+/* Sous-bloc 3.2 (Aside) : Les plus populaires - format Desktop*/
 aside {
   background-color: violet; /* aide visuelle */
   grid-area: aside;
@@ -184,7 +216,6 @@ div#blocCardsPopulaires {
   background-color: gray; /* aide visuelle */
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 44px;
 }
 
 aside article {
@@ -195,16 +226,23 @@ aside article {
 
 div.photoPopulaire {
   background-color: green; /* aide visuelle */
+  border-radius: 20px 0 0 20px;
 }
 
 div.comPopulaire {
-  background-color: blue; /* aide visuelle */
+  /*background-color: #fff;  aide visuelle */
+  border-radius: 0 20px 20px 0;
 }
 
-/* Fin du petit sous-bloc 3.2 (Aside): Les plus populaires */
-/* Fin du bloc 3 : Propositions Hébergements */
+aside a {
+  text-decoration: none;
+  color: black;
+}
 
-/* Bloc 4 : Propositions Activités */
+/* Fin du sous-bloc 3.2 (Aside): Les plus populaires - format Desktop*/
+/* Fin du bloc 3 : Propositions Hébergements - format Desktop*/
+
+/* Bloc 4 : Propositions Activités - format Desktop */
 section#activités {
   background-color: pink; /* AV */
   grid-area: activités;
@@ -259,16 +297,21 @@ div.card {
   border-radius: 20px 20px 0 0;
 }
 
+#activités a {
+  text-decoration: none;
+  color: black;
+}
+
 /*
 .photoActivité {
   box-shadow: 0 0 20px #f2f2f2;
 } */
 
-/* Fin bloc 4 : Propositions Activités */
+/* Fin bloc 4 : Propositions Activités - format Desktop */
 
-/* Fin bloc Main  format Web */
+/* Fin bloc Main - format Desktop */
 
-/* Début bloc Footer  format Web*/
+/* Début bloc Footer - format Desktop*/
 footer {
   grid-area: footer;
   display: grid;
@@ -290,24 +333,24 @@ footer a {
   text-decoration: none;
   color: #000;
 }
-/* Fin du bloc Footer  format Web*/
+/* Fin du bloc Footer - format Desktop*/
 
-/* FIn du format Web */
+/* Fin du format Desktop */
 
 /* Format Mobile */
 @media screen and (max-width: 619px) {
   #divDuBody {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "header"
-      "main"
+      "header "
+      "main "
       "aside"
-      "article1"
-      "article2"
+      "hébergementsMarseille "
+      "activités "
       "footer";
   }
 
-  /* Bloc 1 : Header  format Mobile */
+  /* Bloc 1 : Header - format Mobile */
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -341,11 +384,10 @@ footer a {
     border-bottom: solid #0065fc;
     border-top: none;
   }
-  /* Fin du bloc 1 : Header  format Mobile */
+  /* Fin du bloc 1 : Header - format Mobile */
 
-  /* Bloc 2 : Main  format Mobile */
-
-  /* 1ère section (Introduction recherche)  format Mobile*/
+  /* Bloc 2 : Main - format Mobile */
+  /* 1ère section (Introduction recherche) - format Mobile*/
   #h1Web {
     display: none;
   }
@@ -353,9 +395,8 @@ footer a {
   #h1Mobile {
     display: block;
   }
-  /* Fin 1ère section (Introduction recherche)  format Mobile */
-
-  /*  2ème section (Barre de recherche)  format Mobile */
+  /* Fin 1ère section (Introduction recherche) - format Mobile */
+  /*  2ème section (Barre de recherche) - format Mobile */
   #buttonMobile {
     display: inline;
     width: 45px;
@@ -364,16 +405,44 @@ footer a {
   #buttonWeb {
     display: none;
   }
-  /* Fin de 2ème section (Barre de recherche)  format Mobile */
+  /* Fin de 2ème section (Barre de recherche) - format Mobile */
+  /* Fin du bloc 2 : Main - format Mobile */
 
-  /* Fin du bloc 2 : Main  format Mobile */
+  /* Bloc 3 : Propositions Hébergements - format Mobile */
+  /* Sous-bloc 3.1 (Section) : Hébergements à Marseille - format Mobile */
+  /* Fin du sous-bloc 3.1 (Section) : Hébergements à Marseille - format Mobile */
+  /* Sous-bloc 3.2 (Aside) : Les plus populaires - format Mobile */
+  /* Fin du sous-bloc 3.2 (Aside) : Les plus populaires - format Mobile */
+  /* Fin du bloc 3 : Propositions Hébergements - format Mobile */
 
-  /* Bloc 5 : Footer  format Mobile */
+  /* Bloc 4 : Propositions Activités - format Mobile */
+  div#blocCardsActivités {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6 1fr);
+    /*height: 100vh;*/
+  }
+
+  div.cSimple {
+    height: 229px;
+  }
+
+  div.medium {
+    height: 229px;
+  }
+
+  div.little {
+    height: 229px;
+  }
+
+  /* Fin du bloc 4 : Propositions Activités - format Mobile */
+
+  /* Bloc 5 : Footer - format Mobile */
   footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(10, 1fr);
   }
-  /* Fin du bloc 5 : Footer  format Mobile */
+  /* Fin du bloc 5 : Footer - format Mobile */
 }
 /* Fin du format Mobile */
