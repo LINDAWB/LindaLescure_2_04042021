@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Import du fichier CSS style.css -->
+	<link rel="StyleSheet" href="style5.css" type="text/css" />
+	<!--Import icon font awesome-->
+	<script src="https://kit.fontawesome.com/3a89c9702f.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<title>index5</title>
+
+</head>
+
+<body>
+
+	<div id="divDuBody" class="container">
+		<!-- supprimer class="container" si pas utilisé -->
+
+		<!-- Bloc 1 : Header -->
+		<header>
+			<FIGURE id="logo"><img src="img/logo/Reservia.svg" alt="logo Reservia"></figure>
+			<nav id="nav1">
+				<ul>
+					<li><a href="#h2Hébergements">Hébergements</a></li>
+				</ul>
+			</nav>
+			<nav id="nav2">
+				<ul>
+					<li><a href="#h2Activités">Activités</a></li>
+				</ul>
+			</nav>
+			<nav id="nav3">
+				<ul>
+					<li><a href="#" style="color:#0065FC;font-weight:bold">S'inscrire</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Bloc 2 : Main. C'est  la zone de Recherche. Elle est divisée  en 4 sections-->
+		<main>
+
+			<!-- 1ère section : L'introduction de la zone recherche -->
+			<section id="introRecherche">
+				<h1 id="h1Web">Trouvez votre hébergement pour des vacances de rêve</h1>
+				<h1 id="h1Mobile">Trouvez votre hébergement <br />pour des vacances de rêve</h1>
+				<p>En plein centre-ville ou en pleine nature</p>
+			</section>
+
+			<!-- 2ème section : La barre de recherche-->
+			<section id="barreDeRecherche">
+				<form action="#" method="post">
+					<label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
+					<input type="search" placeholder="  Marseille, France" name="lieu" />
+					<button id="buttonWeb" class="buttonRecherche">Rechercher</button>
+					<button id="buttonMobile" class="buttonRecherche"><i class="fas fa-search"></i></button>
+				</form>
+			</section>
+
+			<!-- 3ème section : Les filtres -->
+			<section id="filtres"> Boutons filtres à venir
+
+			</section>
+
+			<!--4ème section : Résultat de la recherche en nombre de logements-->
+			<section id="résultat">
+				<p><span style="background-color: plum; color:#0065FC; border: 2px solid #f2f2f2;  ">
+						<i class="fas fa-info" style="width: 16px; font-size: 18px; padding-left: 9px; ; ;"></i></span>
+					<span style="margin-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</span>
+				</p>
+			</section>
+
+		</main>
+
+		<!-- Bloc 3 : Propositions Hébergements -->
+		<!-- Il est divisé en 2 blocs  dont 1 gros sous-bloc <section> et 1 petit sous-bloc <aside> -->
+		<!-- Gros sous-bloc 3.1 (Section) : Hébergements à Marseille -->
+		<section id="hébergementsMarseille">
+			<h2>Hébergements à Marseille</h2>
+			<div id="blocCardsHm">
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+				<article class="cardHm">
+					<div class="photoHm">p</div>
+					<div class="comHm">c</div>
+				</article>
+			</div> <!-- div fermante de <div id="blocCardsHm"> -->
+			<p>Afficher plus</p>
+		</section> <!-- Fini du gros sous-bloc 3.1 (Section) : Hébergements -->
+
+		<!-- Petit sous-bloc 3.2 (Aside) : Les plus populaires -->
+		<aside>
+			<h2>Les plus populaires + icone</h2>
+			<div id="blocCardsPopulaires">
+				<article class="cardPopulaire">
+					<div class="photoPopulaire">p</div>
+					<div class="comPopulaire">c</div>
+				</article>
+				<article class="cardPopulaire">
+					<div class="photoPopulaire">p</div>
+					<div class="comPopulaire">c</div>
+				</article>
+				<article class="cardPopulaire">
+					<div class="photoPopulaire">p</div>
+					<div class="comPopulaire">c</div>
+				</article>
+			</div> <!-- div fermante de <div id="blocCardPopulaire"> -->
+		</aside> <!-- Fin du petit sous-bloc 3.2 (Aside) : Les plus populaires -->
+		<!-- Fin du bloc 3 : Propositions Hébergement -->
+
+		<!-- Bloc 4 : Propositions Activités -->
+		<section id="activités">
+			<h2 id="h2Activités">Activités à Marseille</h2>
+			<div id="blocCardsActivités">
+				<div class="cSimple">
+					<div class="card">p</div>
+					<h3>h</h3>
+				</div>
+				<div id="c2">
+					<div class="medium">
+						<div class="card">p</div>
+						<h3>h</h3>
+					</div>
+					<div class="little">
+						<div class="card">p</div>
+						<h3>h</h3>
+					</div>
+				</div>
+				<div class="cSimple">
+					<div class="card">p</div>
+					<h3>h</h3>
+				</div>
+
+				<div id="c4">
+					<div class="little">
+						<div class="card">p</div>
+						<h3>h</h3>
+					</div>
+					<div class="medium">
+						<div class="card">p</div>
+						<h3>h</h3>
+					</div>
+				</div>
+				<!--<article id="card1" class="bigCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Vieux Port</div>
+				</article>
+				<article id="card2" class="mediumCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Fort de Pomègues</div>
+				</article>
+				<article id="card3" class="littleCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Îles du Frioul</div>
+				</article>
+				<article id="card4" class="bigCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Parc National des Calanques</div>
+				</article>
+				<article id="card5" class="littleCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Notre-Dame-de-la-Garde</div>
+				</article>
+				<article id="card6" class="mediumCard">
+					<div class="photoActivité">p</div>
+					<div class="légendeActivité">Parc Longchamp</div>
+				</article> -->
+			</div> <!-- div fermante de <div id="blocCardsActivités" -->
+		</section>
+		<!--<section id="activités">-->
+		<!-- Fin du bloc 4 : Propositions Activités -->
+
+		<!-- Bloc 5 (the last!) : Footer  -->
+		<footer>
+			<div>
+				<h3>A propos</h3> <!-- Tenter h2 -->
+				<ul>
+					<li><a href="#">Fonctionnement du site</a></li>
+					<li><a href="#">Conditions générales de ventes</a></li>
+					<li><a href="#">Données et confidentialité</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Nos hébergements</h3>
+				<ul>
+					<li><a href="#"> Charte qualité </a></li>
+					<li><a href="#"> Soumettre votre hôtel </a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Assistance</h3>
+				<ul>
+					<li><a href="#">Centre d'aide</a></li>
+					<li><a href="#">Nous contacter</a></li>
+				</ul>
+			</div>
+		</footer> <!-- FIn du bloc 5 (the last!) : Footer  -->
+
+	</div> <!-- div fermante de <div id="divDuBody"> -->
+
+</body>
+
+</html>
