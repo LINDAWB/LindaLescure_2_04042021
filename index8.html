@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Import du fichier CSS style.css -->
+	<link rel="StyleSheet" href="style8.css" type="text/css" />
+	<!--Import icon font awesome-->
+	<script src="https://kit.fontawesome.com/3a89c9702f.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<title>index8</title>
+
+</head>
+
+<body>
+
+	<div id="divDuBody" class="container">
+		<!-- supprimer class="container" si pas utilisé -->
+
+		<!-- Bloc 1 : Header -->
+		<header>
+			<FIGURE id="logo"><img src="img/logo/Reservia.svg" alt="logo Reservia"></figure>
+			<nav id="nav1">
+				<ul>
+					<li><a href="#h2Hébergements">Hébergements</a></li>
+				</ul>
+			</nav>
+			<nav id="nav2">
+				<ul>
+					<li><a href="#h2Activités">Activités</a></li>
+				</ul>
+			</nav>
+			<nav id="nav3">
+				<ul>
+					<li><a href="#" style="color:#0065FC;font-weight:bold">S'inscrire</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Bloc 2 : Main. C'est  la zone de Recherche. Elle est divisée  en 4 sections-->
+		<main>
+
+			<!-- 1ère section : L'introduction de la zone recherche -->
+			<section id="introRecherche">
+				<h1 id="h1Web">Trouvez votre hébergement pour des vacances de rêve</h1>
+				<h1 id="h1Mobile">Trouvez votre hébergement <br />pour des vacances de rêve</h1>
+				<p>En plein centre-ville ou en pleine nature</p>
+			</section>
+
+			<!-- 2ème section : La barre de recherche-->
+			<section id="barreDeRecherche">
+				<form action="#" method="post">
+					<label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
+					<input type="search" placeholder="  Marseille, France" name="lieu" />
+					<button id="buttonWeb" class="buttonRecherche">Rechercher</button>
+					<button id="buttonMobile" class="buttonRecherche"><i class="fas fa-search"></i></button>
+				</form>
+			</section>
+
+			<!-- 3ème section : Les filtres -->
+			<section id="filtres"> Boutons filtres à venir
+
+			</section>
+
+			<!--4ème section : Résultat de la recherche en nombre de logements-->
+			<section id="résultat">
+				<p><span style="background-color: plum; color:#0065FC; border: 2px solid #f2f2f2;  ">
+						<i class="fas fa-info" style="width: 16px; font-size: 18px; padding-left: 9px; ; ;"></i></span>
+					<span style="margin-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</span>
+				</p>
+			</section>
+
+		</main>
+
+		<!-- Bloc 3 : Propositions Hébergements -->
+		<!-- Il est divisé en 2 blocs  dont 1 gros sous-bloc <section> et 1 petit sous-bloc <aside> -->
+		<!--  Sous-bloc 3.1 (Section) : Hébergements à Marseille -->
+		<section id="hébergementsMarseille">
+			<h2>Hébergements à Marseille</h2>
+			<div id="blocCardsHm">
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/auberge_la_cannebière.jpg) center; background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Auberge La Cannebière</h3>
+							<p>Nuit à partir de <span>25€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/hotel_du_port.jpg) center; background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Hôtel du port</h3>
+							<p>Nuit à partir de <span>52€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/hotel_les_mouettes.jpg) center;background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Hôtel Les mouettes</h3>
+							<p>Nuit à partir de <span>76€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/hotel_de_la_mer.jpg) center;background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Hôtel de la mer</h3>
+							<p>Nuit à partir de <span>46€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/auberge_le_panier.jpg) center;background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Auberge Le Panier</h3>
+							<p>Nuit à partir de <span>23€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardHm">
+						<div class="photoHm"
+							style="background: url(img/hebergements/4_small/hotel-chez-amina.jpg) center;background-size: cover;">
+						</div>
+						<div class="comHm">
+							<h3>Hôtel chez Amina</h3>
+							<p>Nuit à partir de <span>96€</span></p>
+							<div>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+			</div> <!-- div fermante de <div id="blocCardsHm"> -->
+			<p style="font-weight: bold; padding-left: 10px; padding-top: 15px;">Afficher plus</p>
+		</section> <!-- Fini du sous-bloc 3.1 (Section) : Hébergements -->
+
+		<!-- Sous-bloc 3.2 (Aside) : Les plus populaires -->
+		<aside>
+			<h2>Les plus populaires + icone</h2>
+			<div id="blocCardsPopulaires">
+
+				<a href="#">
+					<article class="cardPopulaire">
+						<div class="photoPopulaire"
+							style="background: url(img/hebergements/4_small/hotel_le_soleil_du_matin.jpg) center; background-size: cover;">
+						</div>
+						<div class="comPopulaire">
+							<h3>Hôtel Le soleil du matin</h3>
+							<p>Nuit à partir de <span>128€</span></p>
+							<div class="stars">
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+
+				<a href="#">
+					<article class="cardPopulaire">
+						<div class="photoPopulaire"
+							style="background: url(img/hebergements/4_small/au_coeur_de_l\'eau_chambres_d\'hotes.jpg) center; background-size: cover;">
+						</div>
+						<div class="comPopulaire">
+							<h3>Au coeur de l'eau Chambres d'hôtes</h3>
+							<p>Nuit à partir de <span>71€</span></p>
+							<div class="stars">
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+				<a href="#">
+					<article class="cardPopulaire">
+						<div class="photoPopulaire"
+							style="background: url(img/hebergements/4_small/hotel_tout_bleu_et_blanc.jpg) center ; background-size: cover;">
+						</div>
+						<div class="comPopulaire">
+							<h3>Hôtel Tout bleu et Blanc</h3>
+							<p>Nuit à partir de <span>68€</span></p>
+							<div class="stars">
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:#0065FC;"><i class="fas fa-star"></i></span>
+								<span style="color:gray;"><i class="fas fa-star"></i></span>
+							</div>
+						</div>
+					</article>
+				</a>
+			</div> <!-- div fermante de <div id="blocCardPopulaire"> -->
+		</aside> <!-- Fin du petit sous-bloc 3.2 (Aside) : Les plus populaires -->
+		<!-- Fin du bloc 3 : Propositions Hébergements -->
+
+		<!-- Bloc 4 : Propositions Activités -->
+		<section id="activités">
+			<h2 id="h2Activités">Activités à Marseille</h2>
+			<div id="blocCardsActivités">
+
+				<div id="c1" class="cSimple">
+					<a href="#">
+						<article class="seul">
+							<div class="card"
+								style="background: url(img/activites/4_small/vieux_port.jpg) center ; background-size: cover;">
+							</div>
+							<h3>Vieux Port</h3>
+						</article>
+					</a>
+				</div>
+
+				<div id="c2">
+					<a href="#">
+						<article class="medium">
+							<div class="card"
+								style="background: url(img/activites/4_small/fort_de_pomegues.jpg) center; background-size: cover;">
+							</div>
+							<h3>Fort de Pomègues</h3>
+						</article>
+					</a>
+					<a href="#">
+						<article class="little">
+							<div class="card"
+								style="background: url(img/activites/4_small/iles_du_frioul.jpg) center; background-size: cover;">
+							</div>
+							<h3>Îles du Frioul</h3>
+						</article>
+					</a>
+				</div>
+
+				<div id="c3" class="cSimple">
+					<a href="#">
+						<article class="seul">
+							<div class="card"
+								style="background: url(img/activites/4_small/parc_national_des_calanques.jpg) center; background-size: cover;">
+							</div>
+							<h3>Parc National des Calanques</h3>
+						</article>
+					</a>
+				</div>
+
+				<div id="c4">
+					<a href="#">
+						<article class="little">
+							<div class="card"
+								style="background: url(img/activites/4_small/notre_dame_de_la_garde.jpg) ; background-size: cover;">
+							</div>
+							<h3>Notre-Dame-de-la-Garde</h3>
+						</article>
+					</a>
+					<a href="#">
+						<article class="medium">
+							<div class="card"
+								style="background: url(img/activites/4_small/parc_longchamp.jpg) center;background-size: cover;">
+							</div>
+							<h3>Parc Longchamp</h3>
+						</article>
+					</a>
+				</div>
+
+			</div> <!-- div fermante de <div id="blocCardsActivités" -->
+		</section>
+		<!--<section id="activités">-->
+		<!-- Fin du bloc 4 : Propositions Activités -->
+
+		<!-- Bloc 5 (the last!) : Footer  -->
+		<footer>
+			<div>
+				<h3>A propos</h3> <!-- Tenter h2 -->
+				<ul>
+					<li><a href="#">Fonctionnement du site</a></li>
+					<li><a href="#">Conditions générales de ventes</a></li>
+					<li><a href="#">Données et confidentialité</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Nos hébergements</h3>
+				<ul>
+					<li><a href="#"> Charte qualité </a></li>
+					<li><a href="#"> Soumettre votre hôtel </a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Assistance</h3>
+				<ul>
+					<li><a href="#">Centre d'aide</a></li>
+					<li><a href="#">Nous contacter</a></li>
+				</ul>
+			</div>
+		</footer> <!-- FIn du bloc 5 (the last!) : Footer  -->
+
+	</div> <!-- div fermante de <div id="divDuBody"> -->
+
+</body>
+
+</html>
