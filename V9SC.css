@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Début format Desktop */
+
+/*@media screen and (min-width: 980px) and (max-width: 1440px) {
+}*/
+
+body {
+  font-family: "Raleway", Times New Roman, Times, serif;
+  font-size: small;
+  /*padding: 10px; */
+}
+
+/* Début conteneur  de la <div id="grill"> représentant le body à diviser en blocs */
+#divDuBody {
+  /*height: 100vh;*/
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  /*grid-template-rows: 1fr 4fr 5fr 4fr 1fr;*/
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "header  header"
+    "main main"
+    "hébergementsMarseille aside"
+    "activités activités"
+    "footer footer";
+}
+
+div.container {
+  border: solid red; /*aide visuelle*/
+}
+/* Fin conteneur <div id="grill"> représentant le body */
+
+/* Bloc Header - format Desktop */
+header {
+  grid-area: header;
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr);
+  grid-template-areas: "logo nav1 nav2 nav3";
+}
+
+#logo {
+  grid-area: logo;
+}
+
+#nav1 {
+  grid-area: nav1;
+}
+
+#nav2 {
+  grid-area: nav2;
+}
+
+#nav3 {
+  grid-area: nav3;
+}
+
+figure {
+  margin: 0;
+}
+
+header li {
+  list-style: none;
+  padding-right: 0px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* menu nav au survol*/
+header nav:hover {
+  color: #0065fc;
+  border-top: solid #0065fc;
+}
+/* Fin du bloc Header - format Desktop */
+
+/* Bloc Main (zone Recherche) - format Desktop */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(4, fr);
+  grid-template-areas:
+    "introRecherche"
+    "barreDeRecherche"
+    "filtres"
+    "résultat";
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* 1ère section (Introduction Recherche) - format Desktop */
+/* masquage titre h1 format mobile */
+#h1Mobile {
+  display: none;
+}
+/* Fin de 1ère section (Introduction Recherche)  - format Desktop */
+
+/* 2ème section (Barre de recherche) - format Desktop */
+form {
+  display: grid;
+  grid-template-columns: 40px 250px 100px 40px;
+  height: 45px;
+}
+
+label i {
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+label {
+  background-color: #f2f2f2;
+  border-radius: 10px 0 0 10px;
+}
+
+input {
+  border: solid #f2f2f2;
+  border-right: none;
+  font-weight: bold;
+}
+
+.buttonRecherche {
+  background-color: #0065fc;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  border: solid #0065fc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Masquage du bouton de recherche du format mobile */
+#buttonMobile {
+  display: none;
+}
+/* Fin 2ème section (Barre de recherche) - format Desktop */
+
+/* Début 3ème section (Filtres) - format Desktop */
+/* Fin 3ème section (Filtres)  format Web */
+section#filtres {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  margin-top: 35px;
+  margin-bottom: 15px;
+  column-gap: 25px;
+  font-weight: bolder;
+}
+
+div.filtreButton {
+  background-color: white;
+  border-radius: 50px;
+  border-top: solid 3px #f2f2f2;
+  border-right: solid 3px #f2f2f2;
+  border-bottom: solid 3px #f2f2f2;
+  max-height: 50px;
+}
+
+button.iconeFiltre {
+  color: #0065fc;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 19px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border: none;
+  max-height: 50px;
+}
+
+button.libelléFiltre {
+  background-color: #fff;
+  border: none;
+  max-height: 50px;
+  padding-right: 20px;
+  padding-left: 15px;
+  font-weight: bolder;
+}
+
+/* Fin du bloc Main (zone Recherche) - format Desktop */
+
+/* Bloc 3 : Propositions d'hébergements - format Desktop */
+
+/* Sous-bloc 3.1 (Section) : Hébergements - format Desktop */
+section#hébergementsMarseille {
+  background-color: #f2f2f2;
+  grid-area: hébergementsMarseille;
+  display: grid;
+  grid-template-rows: 1fr 7fr 1fr;
+  height: 630px;
+  /*grid-template-areas:
+    "h2 "
+    "div"
+    "p "; */
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+div#blocCardsHm {
+  display: grid;
+  grid-template-columns: repeat(3, 247px);
+  grid-template-rows: 2;
+  /*grid-template-areas:
+  "a a a"
+  "a a a"*/
+  /*"article article article"
+    "article article article";*/
+  grid-gap: 30px;
+}
+
+article.cardHm {
+  border: solid #fff 3px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 115px auto;
+  max-height: 205px;
+}
+
+div.photoHm {
+  border-radius: 20px 20px 0 0;
+}
+
+div.comHm {
+  border-radius: 0 0 20px 20px;
+  background-color: #fff;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+article:hover {
+  /* aussi valable pour les articles de l'aside aussi */
+  box-shadow: 0 0 20px #0065fc;
+}
+
+#blocCardsHm a {
+  text-decoration: none;
+  color: black;
+}
+
+p span {
+  /* valable pour les p span de l'aside aussi */
+  font-weight: bold;
+}
+/* Fin du sous-bloc 3.1 (Section) : Hébergements - format Desktop */
+
+/* Sous-bloc 3.2 (Aside) : Les plus populaires - format Desktop*/
+aside {
+  background-color: #f2f2f2;
+  grid-area: aside;
+  display: grid;
+  grid-template-rows: 1fr 8fr;
+  border-radius: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 40px;
+  height: 630px;
+}
+
+div#blocCardsPopulaires {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  /*grid-template-areas:
+    "cardPopulaire"
+    "cardPopulaire"
+    "cardPopulaire";*/
+}
+
+aside article {
+  background-color: white; /* aide visuelle */
+  width: 347px;
+  height: 147px;
+  display: grid;
+  grid-template-columns: 130px auto;
+  height: 147px;
+  border-radius: 20px;
+}
+
+div.photoPopulaire {
+  border-radius: 20px 0 0 20px;
+  height: 147px;
+}
+
+div.comPopulaire {
+  border-radius: 0 20px 20px 0;
+  padding-left: 20px;
+  height: 147px;
+}
+
+div.stars {
+  padding-top: 25px;
+}
+
+aside a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Fin du sous-bloc 3.2 (Aside): Les plus populaires - format Desktop*/
+/* Fin du bloc 3 : Propositions Hébergements - format Desktop*/
+
+/* Bloc 4 : Propositions Activités - format Desktop */
+section#activités {
+  /* background-color: pink;  AV */
+  grid-area: activités;
+  display: grid;
+  grid-template-rows: 1fr 7fr;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+div#blocCardsActivités {
+  /* background-color: aqua; AV */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*grid-template-areas: "c1 c2 c3 c4";*/
+  column-gap: 44px;
+}
+
+div.cSimple {
+  display: grid;
+  grid-template-rows: 1;
+  /*grid-template-areas: "seul"; */
+}
+
+article.seul {
+  display: grid;
+  grid-template-rows: 7fr 1fr;
+}
+
+/*.cSimple {
+  border: #000 solid;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 6fr; /* fr card ajusté à 7 a lieu de 6 à cause du décalage <a href>
+}*/
+
+div#c2 {
+  display: grid;
+  grid-template-rows: 4fr 3fr;
+  row-gap: 51px;
+}
+
+#c4 {
+  display: grid;
+  grid-template-rows: 3fr 4fr;
+  row-gap: 46px;
+}
+
+.little {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.medium {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.card {
+  border-radius: 20px 20px 0 0;
+}
+
+#activités article {
+  border-radius: 20px;
+
+  box-shadow: 0 0 10px gray;
+}
+
+#activités article:hover {
+  box-shadow: 0 0 20px #0065fc;
+}
+
+#activités a {
+  text-decoration: none;
+  color: black;
+}
+
+#activités h3 {
+  padding-left: 10px;
+}
+/* Fin bloc 4 : Propositions Activités - format Desktop */
+/* Fin bloc Main - format Desktop */
+
+/* Début bloc Footer - format Desktop*/
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f2f2f2;
+}
+footer h3 {
+  margin-left: 40px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+/* Fin du bloc Footer - format Desktop*/
+
+/* Fin du format Desktop */
+
+/* Format tablet
+@media screen and (min-width: 620px) and (max-width: 980px) {
+}
+*/
+
+/* Format Mobile */
+@media screen and (max-width: 619px) {
+  #divDuBody {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header "
+      "main "
+      "aside"
+      "hébergementsMarseille "
+      "activités "
+      "footer";
+  }
+
+  /* Bloc 1 : Header - format Mobile */
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo nav3"
+      "nav1 nav2";
+    border-bottom: solid #f2f2f2;
+  }
+
+  #logo {
+    grid-area: logo;
+    /* padding-left: 20px; */
+  }
+
+  #nav1 {
+    grid-area: nav1;
+  }
+
+  #nav2 {
+    grid-area: nav2;
+  }
+
+  #nav3 {
+    grid-area: nav3;
+    padding-left: 70px;
+  }
+
+  header nav:hover {
+    color: #0065fc;
+    border-bottom: solid #0065fc;
+    border-top: none;
+  }
+  /* Fin du bloc 1 : Header - format Mobile */
+
+  /* Bloc 2 : Main - format Mobile */
+  /* 1ère section (Introduction recherche) - format Mobile*/
+  #h1Web {
+    display: none;
+  }
+
+  #h1Mobile {
+    display: block;
+  }
+  /* Fin 1ère section (Introduction recherche) - format Mobile */
+  /*  2ème section (Barre de recherche) - format Mobile */
+  #buttonMobile {
+    display: inline;
+    width: 45px;
+  }
+
+  #buttonWeb {
+    display: none;
+  }
+  /* Fin de 2ème section (Barre de recherche) - format Mobile */
+  /* Fin du bloc 2 : Main - format Mobile */
+
+  /* Bloc 3 : Propositions Hébergements - format Mobile */
+  /* Sous-bloc 3.1 (Section) : Hébergements à Marseille - format Mobile */
+  /* Fin du sous-bloc 3.1 (Section) : Hébergements à Marseille - format Mobile */
+  /* Sous-bloc 3.2 (Aside) : Les plus populaires - format Mobile */
+  /* Fin du sous-bloc 3.2 (Aside) : Les plus populaires - format Mobile */
+  /* Fin du bloc 3 : Propositions Hébergements - format Mobile */
+
+  /* Bloc 4 : Propositions Activités - format Mobile */
+  div#blocCardsActivités {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6 1fr);
+    /*height: 100vh;*/
+  }
+
+  div.cSimple {
+    height: 229px;
+  }
+
+  div.medium {
+    height: 229px;
+  }
+
+  div.little {
+    height: 229px;
+  }
+
+  /* Fin du bloc 4 : Propositions Activités - format Mobile */
+
+  /* Bloc 5 : Footer - format Mobile */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  /* Fin du bloc 5 : Footer - format Mobile */
+}
+/* Fin du format Mobile */

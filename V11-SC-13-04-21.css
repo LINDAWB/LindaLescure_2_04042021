@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --colorBlue: #0065fc;
+  --colorFond: #f2f2f2;
+  --colorFondLight: #deebff;
+}
+
+body {
+  background-color: tomato;
+  font-family: 'Raleway', Times New Roman, Times, serif;
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+#containerPage {
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
+  grid-template-areas:
+    'header  header'
+    'main main'
+    'accomodation aside'
+    'activity activity'
+    'footer footer';
+}
+
+header {
+  grid-area: header;
+}
+
+.topNav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topNav {
+  background-color: var(--colorFond);
+}
+
+.nav1 {
+}
+
+.nav1 img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 40px;
+}
+
+.nav2 {
+  flex-grow: 1;
+}
+
+.nav3 {
+  order: 1;
+}
+
+.nav3 a {
+  padding: 20px;
+  width: 100px;
+}
+
+.nav4 {
+}
+
+.nav4 ul {
+  display: flex;
+}
+.nav4 ul li:first-child {
+  margin-right: 30px;
+}
+
+.nav4 ul li {
+  margin-right: 30px;
+}
+
+.nav4 a {
+  color: black;
+  padding: 20px;
+  width: 100px;
+}
+
+.nav4 a:hover {
+  color: var(--colorBlue);
+  padding: 20px;
+  width: 100px;
+}
+
+main {
+  grid-area: main;
+}
+
+.main {
+  background-color: var(--colorFond);
+}
+
+.titleMain {
+  display: flex;
+}
+
+#main .titleMain h1:first-child {
+  margin-right: 10px;
+}
+
+#main .titleMain h1 {
+  margin-top: 14px;
+  font-size: 20px;
+}
+
+#main .form input[type='text'] {
+  height: 30px;
+  width: 140px;
+}
+
+#main .form input[placeholder='  Marseille, France'] {
+  font-weight: bold;
+}
+
+#main .form a {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--colorBlue);
+  color: var(--colorFond);
+  padding: 10px;
+  transition: 400ms;
+}
+
+#main .form a:hover {
+  color: var(--colorFond);
+  box-shadow: 0px 5px 10px var(--colorBlue);
+  transition: 400ms;
+}
+
+#main .form .iconSearch {
+  display: none;
+}
+
+#main .filters {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#main .filters p {
+  font-size: 16px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+#main .filters i {
+  margin-left: 10px;
+  margin-right: 20px;
+  color: var(--colorBlue);
+}
+#main .filters a {
+  color: black;
+  font-weight: bold;
+}
+
+#main .infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#main .infos {
+  margin-top: 40px;
+}
+
+article#accomodation {
+  background-color: var(--colorFondLight);
+  grid-area: accomodation;
+}
+
+#accomodation .boxCards1 {
+  width: 98%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#accomodation .boxCard1 {
+  background-color: var(--colorFondLight);
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#accomodation .boxCard1:hover {
+  background-color: var(--colorFondLight);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.221);
+  border-radius: 15px;
+}
+
+#accomodation .boxCard1 img {
+  height: 120px;
+  width: 220px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#accomodation .textBoxCard1 {
+  padding: 10px;
+}
+
+#accomodation .textBoxCard1 h3 {
+  margin: 0;
+}
+
+#accomodation a.readMe {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 32px;
+  color: black;
+  transition: 400ms;
+}
+
+#accomodation a.readMe:hover {
+  text-decoration: underline;
+  transition: 400ms;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.aside {
+  background-color: var(--colorFondLight);
+}
+
+#aside .titleAside {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#aside .cardAside {
+}
+
+#aside .cardAside2 {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 268px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: 400ms;
+}
+
+#aside .cardAside2:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(0, 0, 0, 0.221);
+  transition: 400ms;
+}
+
+#aside .imgCard2 img {
+  object-fit: cover;
+  width: 136px;
+  height: 132px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+#aside .textCard2 {
+  margin-left: 14px;
+}
+
+section#activity {
+  /* background-color: pink;  AV */
+  grid-area: activity;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Format Big Size Tablet */
+@media screen and (min-width: 1050px) and (max-width: 1180px) {
+  #accomodation .boxCard1 img {
+    width: 250px;
+  }
+}
+
+/* Format Litle Size Tablet */
+@media screen and (min-width: 620px) and (max-width: 1049px) {
+  #containerPage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header '
+      'main '
+      'aside'
+      'accomodation'
+      'activity'
+      'footer';
+  }
+  #accomodation .boxCard1 img {
+    width: 240px;
+  }
+
+  #aside .cardAside2 {
+    justify-content: flex-start;
+  }
+
+  #aside .cardAside2 {
+    max-width: 400px;
+  }
+}
+
+/* Format Size Mobil */
+@media screen and (max-width: 619px) {
+  #containerPage {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'header '
+      'main '
+      'aside'
+      'accomodation'
+      'activity'
+      'footer';
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  .nav2 {
+    min-width: 200px;
+    flex-grow: 1;
+  }
+
+  .nav3 {
+    order: 0;
+  }
+
+  .nav4 {
+    flex-grow: 1;
+  }
+
+  .nav4 ul li:first-child {
+    margin-right: 160px;
+  }
+
+  main {
+    padding-top: 30px;
+  }
+
+  #main .titleMain {
+    display: grid;
+  }
+
+  #main .titleMain h1 {
+    font-size: 30px;
+  }
+
+  #main p {
+    font-size: 20px;
+  }
+  #main .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main .filters {
+    flex-wrap: wrap;
+  }
+
+  #main .filters P {
+    font-size: 22px;
+    padding-top: 30px;
+  }
+
+  #main .filters i {
+    font-size: 22px;
+    margin-left: 20px;
+    padding-top: 30px;
+  }
+
+  #main .filters a {
+    font-size: 22px;
+    padding-top: 20px;
+  }
+
+  #main .filters i:last-child {
+    margin-left: 200px;
+  }
+
+  #main .infos {
+    display: flex;
+  }
+
+  #main .infos {
+    font-size: 20px;
+  }
+
+  #accomodation .boxCards1 {
+    padding-left: 10px;
+    width: 100%;
+    margin: auto;
+  }
+
+  #accomodation .boxCard1 img {
+    height: 116px;
+    width: 425px;
+  }
+
+  #aside .cardAside2 {
+    width: 96%;
+    margin: auto;
+    justify-content: flex-start;
+  }
+
+  #aside .cardAside2 {
+    margin-bottom: 15px;
+    max-width: 500px;
+  }
+}
